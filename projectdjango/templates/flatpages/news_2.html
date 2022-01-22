@@ -1,0 +1,34 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters % }
+
+{% block title %}
+Mewss
+{% endblock title %}
+
+{% block content %}
+<h2>Новость</h2>
+    <table>
+        <tr>
+            <td>
+                Заголовок
+            </td>
+            <td>
+                Дата публикации
+            </td>
+            <td>
+                Публикация
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{news_2.name}}
+            </td>
+            <td>
+                {{ date_news|date:'d-M-Y H:i'}}
+            </td>
+            <td>
+                {{ news_2.description }}
+            </td>
+        </tr>
+    </table>
+{% endblock content %}
